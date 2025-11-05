@@ -1,0 +1,13 @@
+
+--Khoi tao co user---
+Scaffold-DbContext "Server=LAPTOP-NHQJCKSI;Database=QL_SIEUTHIMINI_TIEMTAPHOA;User Id=sa;Password=123;TrustServerCertificate=True" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -Context AppDbContext -DataAnnotations -UseDatabaseNames
+
+
+---khoi tao---
+
+Scaffold-DbContext "Server=LAPTOP-NHQJCKSI;Database=QL_SIEUTHIMINI_TIEMTAPHOA;Trusted_Connection=True;TrustServerCertificate=True" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -Context MiniStoreContext -DataAnnotations -UseDatabaseNames
+
+
+---ghi de neu them du lieu moi trong database--
+
+Scaffold-DbContext "Server=LAPTOP-NHQJCKSI;Database=QL_SIEUTHIMINI_TIEMTAPHOA;Trusted_Connection=True;TrustServerCertificate=True" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -Context MiniStoreContext -DataAnnotations -UseDatabaseNames -Force
