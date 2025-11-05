@@ -1,13 +1,18 @@
+--Must download these tools in Nuget and specifically into your project--
+Microsoft EntityFrameworkCore
+Microsoft EntityFrameworkCore SqlServer
+Microsoft EntityFrameworkCore Tools
 
---Khoi tao co user---
-Scaffold-DbContext "Server=LAPTOP-NHQJCKSI;Database=QL_SIEUTHIMINI_TIEMTAPHOA;User Id=sa;Password=123;TrustServerCertificate=True" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -Context AppDbContext -DataAnnotations -UseDatabaseNames
+--Initialize user in Visual Studio Console---
+Scaffold-DbContext "Server=<your server name>;Database=QL_SIEUTHIMINI_TIEMTAPHOA;User Id=<your user-id>;Password=<your user password>;TrustServerCertificate=True" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -Context AppDbContext -DataAnnotations -UseDatabaseNames
 
 
----khoi tao---
+---Generate without users---
 
-Scaffold-DbContext "Server=LAPTOP-NHQJCKSI;Database=QL_SIEUTHIMINI_TIEMTAPHOA;Trusted_Connection=True;TrustServerCertificate=True" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -Context MiniStoreContext -DataAnnotations -UseDatabaseNames
+Scaffold-DbContext "Server=<your server name>;Database=QL_SIEUTHIMINI_TIEMTAPHOA;Trusted_Connection=True;TrustServerCertificate=True" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -Context MiniStoreContext -DataAnnotations -UseDatabaseNames
 
 
----ghi de neu them du lieu moi trong database--
+---Re-write if changes in your database--
 
-Scaffold-DbContext "Server=LAPTOP-NHQJCKSI;Database=QL_SIEUTHIMINI_TIEMTAPHOA;Trusted_Connection=True;TrustServerCertificate=True" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -Context MiniStoreContext -DataAnnotations -UseDatabaseNames -Force
+Scaffold-DbContext "Server=<your server name>;Database=QL_SIEUTHIMINI_TIEMTAPHOA;Trusted_Connection=True;TrustServerCertificate=True" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -Context MiniStoreContext -DataAnnotations -UseDatabaseNames -Force
+
